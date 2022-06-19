@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% if name and link and keyword %}
+        <h3> Hello {{name}}, how was your day</h3>
+        <h3>{{link}}</h3>
+        <h3>{{keyword}}</h3>
+        <h3>{{text}}</h3>
+        {% endif %}
+
+    <form action="/result" method="POST">
+        <label for="name">name</label>
+        <input name="name" id="name" type="text" placeholder="name">
+        <label for="link">link</label>
+        <input id="link" name="link" type="text" placeholder="link">
+        <label for="keyword">keyword</label>
+        <input id="keyword" name="keyword" type="text" placeholder="palavra-chave">
+        <input type="Submit">
+        
+    </form>
+    
+    
+</body>
+</html>
