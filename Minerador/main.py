@@ -15,10 +15,13 @@ def raspador():
 
     print(texto_raspado)
 
-def captura_tela():
+def captura_tela(url):
     driver = webdriver.Firefox()
 
-    driver.get('https://www.businessinsider.com/ukraine-eu-application-european-commission-recommends-candidate-status-2022-6')
+    #Botar o link do usuário aq
+    driver.get(url)
+
+    #driver.get('https://www.businessinsider.com/ukraine-eu-application-european-commission-recommends-candidate-status-2022-6')
 
     action = ActionChains(driver)
     

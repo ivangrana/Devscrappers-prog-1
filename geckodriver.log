@@ -1,0 +1,39 @@
+1655733119999	geckodriver	INFO	Listening on 127.0.0.1:36455
+1655733120853	mozrunner::runner	INFO	Running command: "/snap/firefox/current/firefox.launcher" "--marionette" "--remote-debugging-port" "59957" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileokTxEp"
+Gtk-Message: 10:52:01.131: Failed to load module "canberra-gtk-module"
+Gtk-Message: 10:52:01.216: Failed to load module "canberra-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1655733125232	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:59957
+ATTENTION: default value of option mesa_glthread overridden by environment.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileokTxEp/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+1655733126914	Marionette	INFO	Listening on port 46089
+DevTools listening on ws://localhost:59957/devtools/browser/3e2ccbfe-acae-432b-a00e-7460f5867560
+Read port: 46089
+1655733126978	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://tags.premiumads.com.br/dfp/3c4c00af-0c92-424d-0ca7-08d93fe982d8, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dol.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dol.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dol.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dol.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dol.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dol.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dol.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dol.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dol.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dol.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dol.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dol.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dol.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dol.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://dol.com.br"
+1655733185200	Marionette	INFO	Stopped listening on port 46089
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1969\"  data: no]"
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo

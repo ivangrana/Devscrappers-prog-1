@@ -8,24 +8,21 @@
 </head>
 <body>
 
-    {% if name and link and keyword %}
-        <h3> Hello {{name}}, how was your day</h3>
-        <h3>{{link}}</h3>
-        <h3>{{keyword}}</h3>
-        <h3>{{text}}</h3>
-        {% endif %}
-
     <form action="/result" method="POST">
-        <label for="name">name</label>
-        <input name="name" id="name" type="text" placeholder="name">
         <label for="link">link</label>
-        <input id="link" name="link" type="text" placeholder="link">
+        <input id="link" name="link" type="text" placeholder="link" required>
         <label for="keyword">keyword</label>
-        <input id="keyword" name="keyword" type="text" placeholder="palavra-chave">
+        <input id="keyword" name="keyword" type="text" placeholder="palavra-chave" required>
         <input type="Submit">
         
     </form>
-    
-    
+    <!--
+    {% if link and keyword %}
+        <p>
+
+        </p>
+        <p></p>
+        {% endif %}
+    -->
 </body>
 </html>
