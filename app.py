@@ -16,14 +16,14 @@ def home():
 def result():
     output = request.form.to_dict()
     print(output)
-    link = output["link"]
+    #link = output["link"]
     keyword = output["keyword"]#palavras-chaves para a busca
 
-    mn.captura_tela(link)
-    lks.search(link, keyword)
+    mn.captura_tela()
+    lks.search(keyword)
     #reqs = rqs.get(link) #request do link
     #soup = bs(reqs.text, 'html.parser')  #criação do objeto beautifulSoup
-    return render_template("index.html", link=link, keyword=keyword)
+    return render_template("index.html", keyword=keyword)
 
 if __name__ == '__main__':
     app.run(debug= True, port=8000)
