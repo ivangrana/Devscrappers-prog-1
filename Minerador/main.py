@@ -22,6 +22,23 @@ import time
 links_raspados = []
 new_list = []
 
+
+def raspador_palavras_chave2(key):
+  urls2 = ['https://www.nbcnews.com/business']
+  for j in urls2:
+  #urls que serão mineradas
+    reqs = requests.get(j) #request do link
+    soup = BeautifulSoup(reqs.text, 'html.parser')  #criação do objeto beautifulSoup
+    for k in key:
+     for link in soup.find_all('a'):
+       try:
+           if ('/' not in link.get('href') or (len(link) < 2)):
+             pass
+           elif (k in link.get('href')): #inserção das palavras chaves
+            links_raspados.append(link.get('href'))
+       except:
+        pass
+
 def raspador_palavras_chave(key):
   urls = ['https://markets.businessinsider.com/']
   for j in urls:
@@ -37,7 +54,6 @@ def raspador_palavras_chave(key):
             links_raspados.append('https://markets.businessinsider.com' + link.get('href'))
        except:
         pass
-
 
 
 def captura_tela(item):
@@ -56,8 +72,12 @@ def captura_tela(item):
 
 def main(k):
     raspador_palavras_chave(k)
+    raspador_palavras_chave2(k)
     new_list = list(dict.fromkeys(links_raspados))
+    new_list.remove('https://markets.businessinsider.comhttps://www.insider.com/news')
+    sorted(new_list)
     for item in new_list:
      captura_tela(item)
+
   
   
