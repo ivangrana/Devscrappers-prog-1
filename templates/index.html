@@ -4,18 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <!--
+    <style>
+        :root{
+            --bodyColor: #FEE599;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0 auto;
+            padding: 0 auto;
+            display: flex;
+            background-color: var(--bodyColor);
+            justify-content: center;
+            align-items: center;
+        }
+        label{
+            text-align: center;
+            font-size: calc(2vw + 5px);
+        }
+        form{
+            margin: 0 auto;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 50%;
+            width: 50%;
+        }
+
+    </style>
+    -->
+    <title>StockScrapper</title>
 </head>
 <body>
-
+    <header>
+        <h1>StockScrapper</h1>
+        <div></div>
+    </header>
+    <main>
     <form action="/result" method="POST">
-       <!-- <label for="link">link</label>
-        <input id="link" name="link" type="text" placeholder="link" required>-->
-        <label for="keyword">keyword</label>
+        <div class="params">
+            <button type="button">Palavra-chave</button>
+            <button type="button">param2</button>
+            <button type="button">param3</button>
+        </div>
         <input id="keyword" name="keyword" type="text" placeholder="palavra-chave" required>
-        <input type="Submit">
-        
+        <input id="buscar" type="Submit" value="Buscar">
     </form>
+    <div class = "howTo">
+        <div class = "titlehT">
+            <h2>COMO USAR</h2>
+            <span></span>
+        </div>
+        <span class = "steps">
+            <div><h3>Passo 1:</h3><img src="{{url_for('static', filename='Group 17.svg')}}" alt=" "><p>Escolher os
+                parâmetros e 
+                digitar na barra de 
+                busca.</p></div>
+            <div><h3>Passo 2:</h3><img src="{{url_for('static', filename='submit 1.svg')}}" alt=" "><p>Clicar no botão de 
+                bucscar.</p></div>
+            <div><h3>Passo 3:</h3><img src="{{url_for('static', filename='newsletter 1.svg')}}" alt=" "><p>Veja os resultados 
+                e faça download das notícias que desejar.</p></div>
+        </span>
+    </div>
+</main>
     <!--
     {% if link and keyword %}
         <p>
