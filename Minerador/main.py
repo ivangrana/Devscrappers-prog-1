@@ -49,7 +49,6 @@ def captura_tela(item):
     
     name_news = str(random.randint(10,10000)) + ".png"
     driver.save_full_page_screenshot(name_news)
-    time.sleep(15)
     driver.close()
 
 
