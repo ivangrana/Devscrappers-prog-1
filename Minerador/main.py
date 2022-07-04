@@ -2,8 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import ui
 from selenium.webdriver import ActionChains
-from PIL import Image
-import numpy as np
 import requests
 from bs4 import BeautifulSoup
 import random
@@ -74,10 +72,8 @@ def main(k):
     raspador_palavras_chave(k)
     raspador_palavras_chave2(k)
     new_list = list(dict.fromkeys(links_raspados))
-    new_list.remove('https://markets.businessinsider.comhttps://www.insider.com/news')
+    if 'https://markets.businessinsider.comhttps://www.insider.com/news' in new_list:
+     new_list.remove('https://markets.businessinsider.comhttps://www.insider.com/news')
     sorted(new_list)
     for item in new_list:
      captura_tela(item)
-
-  
-  
