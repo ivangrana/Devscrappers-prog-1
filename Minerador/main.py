@@ -17,39 +17,36 @@ import time
 #     print(texto_raspado)
 
 #palavras_chaves = ["crypto"]
+
 links_raspados = []
 new_list = []
+urls = ['https://www.nbcnews.com/business','https://markets.businessinsider.com/','https://www.reuters.com/business/finance']
 
-
-def raspador_palavras_chave2(key):
-  urls2 = ['https://www.nbcnews.com/business']
-  for j in urls2:
+def raspador_palavras_chave2(key,url):
   #urls que serão mineradas
-    reqs = requests.get(j) #request do link
+    reqs = requests.get(url) #request do link
     soup = BeautifulSoup(reqs.text, 'html.parser')  #criação do objeto beautifulSoup
     for k in key:
      for link in soup.find_all('a'):
        try:
-           if ('/' not in link.get('href') or (len(link) < 2)):
+           if (k not in link.get('href') or (len(link) < 2)):
              pass
            elif (k in link.get('href')): #inserção das palavras chaves
             links_raspados.append(link.get('href'))
        except:
         pass
 
-def raspador_palavras_chave(key):
-  urls = ['https://markets.businessinsider.com/']
-  for j in urls:
+def raspador_palavras_chave(key,url):
   #urls que serão mineradas
-    reqs = requests.get(j) #request do link
+    reqs = requests.get(url) #request do link
     soup = BeautifulSoup(reqs.text, 'html.parser')  #criação do objeto beautifulSoup
     for k in key:
      for link in soup.find_all('a'):
        try:
-           if ('news' not in link.get('href') or (len(link) < 2)):
+           if ('/' not in link.get('href') or (len(link) < 2)):
              pass
            elif (k in link.get('href')): #inserçsão das palavras chaves
-            links_raspados.append('https://markets.businessinsider.com' + link.get('href'))
+            links_raspados.append(url + link.get('href'))
        except:
         pass
 
@@ -69,11 +66,14 @@ def captura_tela(item):
 #if __name__ == '__main__':
 
 def main(k):
-    raspador_palavras_chave(k)
-    raspador_palavras_chave2(k)
+    # raspador_palavras_chave(k,urls[1])
+    #raspador_palavras_chave2(k,urls[0])
+    raspador_palavras_chave(k,urls[2])
     new_list = list(dict.fromkeys(links_raspados))
     if 'https://markets.businessinsider.comhttps://www.insider.com/news' in new_list:
      new_list.remove('https://markets.businessinsider.comhttps://www.insider.com/news')
     sorted(new_list)
+    print(new_list)
     for item in new_list:
      captura_tela(item)
+
