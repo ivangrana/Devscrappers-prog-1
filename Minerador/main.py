@@ -5,7 +5,6 @@ from selenium.webdriver import ActionChains
 import requests
 from bs4 import BeautifulSoup
 import random
-import time
 
 # def raspador(filename):
 #     filename = 'exemplo.png'
