@@ -23,3 +23,4 @@ function convertfind() {
     coverbutton.style.opacity='1'
     keybutton.style.opacity='0.5'
 }
+
