@@ -1,0 +1,62 @@
+update.go:85: cannot change mount namespace according to change mount (/var/lib/snapd/hostfs/usr/share/libreoffice/help /usr/share/libreoffice/help none bind,ro 0 0): cannot create directory "/usr/share/libreoffice/help": permission denied
+update.go:85: cannot change mount namespace according to change mount (/var/lib/snapd/hostfs/usr/share/xubuntu-docs /usr/share/xubuntu-docs none bind,ro 0 0): cannot open directory "/var/lib": permission denied
+1657541391599	geckodriver	INFO	Listening on 127.0.0.1:38415
+1657541392694	mozrunner::runner	INFO	Running command: "/snap/firefox/current/firefox.launcher" "--marionette" "--remote-debugging-port" "40791" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiley7zSQX"
+Gtk-Message: 09:09:53.446: Failed to load module "canberra-gtk-module"
+Gtk-Message: 09:09:53.514: Failed to load module "canberra-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+amdgpu: os_same_file_description couldn't determine if two DRM fds reference the same file description.
+If they do, bad things may happen!
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1657541395360	Marionette	INFO	Marionette enabled
+1657541395368	Marionette	INFO	Listening on port 35715
+WebDriver BiDi listening on ws://localhost:40791
+Read port: 35715
+1657541395697	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiley7zSQX/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:40791/devtools/browser/28425179-0855-467c-aac5-b47e3754c85c
+JavaScript error: https://www.googletagmanager.com/gtm.js?id=GTM-MBTPXX, line 36: uncaught exception: [object Object]
+JavaScript error: https://markets.businessinsider.com/news/stocks/stock-markets-today-us-futures-slide-inflation-data-oil-falls-2022-7 line 430 > injectedScript, line 10: ReferenceError: $ is not defined
+JavaScript error: https://www.googletagmanager.com/gtm.js?id=GTM-MBTPXX, line 36: uncaught exception: [object Object]
+JavaScript error: https://markets.businessinsider.com/news/stocks/stock-markets-today-us-futures-slide-inflation-data-oil-falls-2022-7 line 503 > injectedScript, line 6: TypeError: ga.getAll()[0] is undefined
+1657541403701	geckodriver	INFO	Listening on 127.0.0.1:53217
+1657541404052	mozrunner::runner	INFO	Running command: "/snap/firefox/current/firefox.launcher" "--marionette" "--remote-debugging-port" "54291" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile5arleD"
+Gtk-Message: 09:10:04.273: Failed to load module "canberra-gtk-module"
+Gtk-Message: 09:10:04.277: Failed to load module "canberra-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+amdgpu: os_same_file_description couldn't determine if two DRM fds reference the same file description.
+If they do, bad things may happen!
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1657541405897	Marionette	INFO	Marionette enabled
+1657541405906	Marionette	INFO	Listening on port 37201
+WebDriver BiDi listening on ws://localhost:54291
+Read port: 37201
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+1657541406227	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile5arleD/search.json.mozlz4", (void 0)))
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/_j1ezhpSwBWUHEITOmC2IR4vOiGfDYio7V63aY1ETrc.js line 2 > eval line 4354 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:54291/devtools/browser/875f3dfb-0b86-4ece-bfdf-a8c6affb6f12
+JavaScript error: https://www.googletagmanager.com/gtm.js?id=GTM-MBTPXX, line 36: uncaught exception: [object Object]
+JavaScript error: https://markets.businessinsider.com/news/commodities/oil-price-forecast-outlook-fall-without-recession-citi-russia-production-2022-7 line 430 > injectedScript, line 10: ReferenceError: $ is not defined
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/_j1ezhpSwBWUHEITOmC2IR4vOiGfDYio7V63aY1ETrc.js line 2 > eval line 1749 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"
+1657541421590	Marionette	INFO	Stopped listening on port 35715
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"
+1657541438018	Marionette	INFO	Stopped listening on port 37201
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
