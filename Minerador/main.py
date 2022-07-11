@@ -105,4 +105,4 @@ def main(k,userMail):
     print(new_list)
     for item in new_list:
      captura_tela(item)
-     send_mail(new_list,userMail)
+    send_mail(new_list,userMail)
