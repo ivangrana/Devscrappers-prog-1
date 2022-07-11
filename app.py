@@ -2,20 +2,17 @@ from flask import Flask,render_template,request
 import requests as rqs
 from bs4 import BeautifulSoup as bss
 import Minerador.main as mn
+import bancos_de_dados.bd as bd
 
 app = Flask(__name__)
 
 @app.route("/")
 
-@app.route("/home")
+@app.route("/home",methods=['POST','GET'])
 def home():
-    return render_template("cadastro.html")
-
-@app.route("/login")
-def login():
     return render_template("login.html")
 
-@app.route("/actions")
+@app.route("/actions",methods=['POST','GET'])
 def action():
     return render_template("index.html")
 

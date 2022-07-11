@@ -16,12 +16,12 @@
         <div></div>
     </header>
     <main>
-    <form action="/result" method="POST">
-        <div class="params">
-            <button type="button">Palavra-chave</button>
-            <button type="button">param2</button>
-            <button type="button">param3</button>
+	 <div class="params">
+            <button type="button" id="keybutton" onclick="keyfind()" >Palavra-chave</button>
+            <button type="button" id="coverbutton" onclick="convertfind()">Conversor</button>
         </div>
+    <div id="key">
+ 	<form action="/result" method="POST">                                                                                                    
         <input id="keyword" name="keyword" type="text" placeholder="palavra-chave" required>
         <input id="buscar" type="Submit" value="Buscar">
     </form>
@@ -37,9 +37,43 @@
                 busca.</p></div>
             <div><h3>Passo 2:</h3><img src="{{url_for('static', filename='submit 1.svg')}}" alt=" "><p>Clicar no botão de 
                 bucscar.</p></div>
-            <div><h3>Passo 3:</h3><img src="{{url_for('static', filename='newsletter 1.svg')}}" alt=" "><p>Veja os resultados 
+            <div><h3>Passo 3:</h3><img src="{{url_for('static', filename='newsletter 1.svg')}}" alt=" "><p>Veja os resultados                 
                 e faça download das notícias que desejar.</p></div>
         </span>
+    </div>
+    </div>
+
+    <div id="convertter" >
+	<span>
+	<div>
+	<label for="">Valor Inicial</label>
+	<input type="">
+	<label for="">Moeda Inicial</label>
+	<input type="">
+	<label for="">Moeda Final</label>
+	<input type="">
+	</div>
+	<div>
+	<p>Valor Final</p>
+	<p></p>
+	</div>
+	<input type="button" value="Converter">
+	</span>
+	<div class = "howTo">
+        <div class = "titlehT">
+            <h2>COMO USAR</h2>
+            <span></span>
+        </div>
+        <span class = "steps">
+            <div><h3>Passo 1:</h3><img src="{{url_for('static', filename='Group 17.svg')}}" alt=" "><p>Escolher os
+                parâmetros e
+                digitar na barra de
+                busca.</p></div>
+            <div><h3>Passo 2:</h3><img src="{{url_for('static', filename='submit 1.svg')}}" alt=" "><p>Clicar no botão de
+                bucscar.</p></div>
+        </span>
+    </div>
+
     </div>
 </main>
     <!--
@@ -50,5 +84,6 @@
         <p></p>
         {% endif %}
     -->
+    <script src="{{url_for('static', filename='event.js')}}"></script>
 </body>
 </html>
