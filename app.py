@@ -2,7 +2,7 @@ from flask import Flask,render_template,request
 import requests as rqs
 from bs4 import BeautifulSoup as bss
 import Minerador.main as mn
-import bancos_de_dados.bd as bd
+
 
 app = Flask(__name__)
 
