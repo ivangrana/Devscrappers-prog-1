@@ -66,7 +66,7 @@ def captura_tela(item):
     driver.save_full_page_screenshot(name_news)
     driver.close()
 
-def send_mail(new_list):
+def send_mail(new_list, mail):
     mail_content = ' '
     for k in new_list:
         mail_content += k
@@ -75,7 +75,7 @@ def send_mail(new_list):
 #Senha e email do remetente
     remetente = 'devscrappers@outlook.com'
     senha = '4hkbgp3r'
-    destinatario = 'ivan.grana@icen.ufpa.br'
+    destinatario = mail 
 #MIME
     message = MIMEMultipart()
     message['From'] = remetente
@@ -94,7 +94,7 @@ def send_mail(new_list):
     
 #if __name__ == '__main__':
 
-def main(k):
+def main(k,userMail):
     raspador_palavras_chave(k,urls[1])
     raspador_palavras_chave2(k,urls[0])
     raspador_palavras_chave(k,urls[2])
@@ -105,4 +105,4 @@ def main(k):
     print(new_list)
     for item in new_list:
      captura_tela(item)
-     send_mail(new_list)
+     send_mail(new_list,userMail)

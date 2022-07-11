@@ -22,6 +22,7 @@
         </div>
     <div id="key">
  	<form action="/result" method="POST">                                                                                                    
+	<input id ="emailUser" name="emailUser" type="text" placeholder="e-mail">	
         <input id="keyword" name="keyword" type="text" placeholder="palavra-chave" required>
         <input id="buscar" type="Submit" value="Buscar">
     </form>
@@ -46,12 +47,16 @@
     <div id="convertter" >
 	<span>
 	<div>
-	<label for="">Valor Inicial</label>
-	<input type="">
-	<label for="">Moeda Inicial</label>
-	<input type="">
-	<label for="">Moeda Final</label>
-	<input type="">
+	<label for="valorInicial">Valor Inicial</label>
+	<input id="valorInicial" name="valorInicial" type="number">
+	<label for="moedaInicial">Moeda Inicial</label>
+	<select id="moedaInicial" name="moedaInicial">
+			<option value="">moedaInicial1</option>
+	</select>
+	<label for="moedaFinal">Moeda Final</label>
+	<select id="moedaFinal" name="moedaFinal">
+		<option value="">moedaFinal1</option>
+	</select>
 	</div>
 	<div>
 	<p>Valor Final</p>

@@ -60,3 +60,13 @@ console.error: "Error during quit-application-granted: [Exception... \"File erro
 1657541438018	Marionette	INFO	Stopped listening on port 37201
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
 Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+1657547217887	geckodriver	INFO	Listening on 127.0.0.1:42579
+1657547218405	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "53421" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile0wWjMH"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1657547225990	Marionette	INFO	Marionette enabled
+1657547226022	Marionette	INFO	Listening on port 46079
+WebDriver BiDi listening on ws://localhost:53421
+Read port: 46079
