@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup
 import requests
 from aux import links
 
-
 pagina = requests.get(links[1])
 
 soup = BeautifulSoup(pagina.text,'html.parser')
@@ -19,7 +18,7 @@ def conversao(taxa,valor): #funcao que faz a conversao e devolve o valor final
 
 
 def valor_final():
-    moeda = float(input("entre o valor em {} para ser convertido -> "))
+    valor = float(input("entre o valor em {} para ser convertido -> "))
     valor_final = conversao(taxa,valor)
     print("Valor em -> ",str(round(valor_final,2)))
     
