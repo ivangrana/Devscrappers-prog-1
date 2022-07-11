@@ -9,6 +9,14 @@ app = Flask(__name__)
 
 @app.route("/home")
 def home():
+    return render_template("cadastro.html")
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+@app.route("/actions")
+def action():
     return render_template("index.html")
 
 @app.route("/result", methods=['POST','GET'])
@@ -22,7 +30,7 @@ def result():
     #print(mn.raspadorValendo(keyword))
     #reqs = rqs.get(link) #request do link
     #soup = bs(reqs.text, 'html.parser')  #criação do objeto beautifulSoup
-    return render_template("index.html",keyword=keyword)
+    return render_template("receive.html",keyword=keyword)
 
 if __name__ == '__main__':
     app.run(debug= True, port=8000)
