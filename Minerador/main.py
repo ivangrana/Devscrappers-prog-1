@@ -95,13 +95,21 @@ def send_mail(new_list):
 
 def main(k):
     raspador_palavras_chave(k,urls[1])
-    #raspador_palavras_chave2(k,urls[0])
+    raspador_palavras_chave2(k,urls[0])
+    #raspador_palavras_chave(k,urls[2])
+    new_list = list(dict.fromkeys(links_raspados))
+    if 'https://markets.businessinsider.comhttps://www.insider.com/news' in new_list:
+     new_list.remove('https://markets.businessinsider.comhttps://www.insider.com/news')
+    sorted(new_list)
+    for item in new_list:
+     captura_tela(item)
+
+def main_2(k):
+    raspador_palavras_chave(k,urls[1])
+    raspador_palavras_chave2(k,urls[0])
     #raspador_palavras_chave(k,urls[2])
     new_list = list(dict.fromkeys(links_raspados))
     if 'https://markets.businessinsider.comhttps://www.insider.com/news' in new_list:
      new_list.remove('https://markets.businessinsider.comhttps://www.insider.com/news')
     sorted(new_list)
     send_mail(new_list)
-    #print(new_list)
-    #for item in new_list:
-     #captura_tela(item)
