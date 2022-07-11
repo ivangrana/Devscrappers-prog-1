@@ -14,12 +14,6 @@ taxa = float(taxa)
 
 def conversao(taxa,valor): #funcao que faz a conversao e devolve o valor final
     final = valor*taxa
-    return final
+    return round(final,2)
 
-
-def valor_final():
-    valor = float(input("entre o valor em {} para ser convertido -> "))
-    valor_final = conversao(taxa,valor)
-    print("Valor em -> ",str(round(valor_final,2)))
-    
-valor_final()
+print(conversao(taxa,300))
