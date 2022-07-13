@@ -1,36 +1,108 @@
+from xxlimited import new
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import ui
 from selenium.webdriver import ActionChains
-from PIL import Image
-import pytesseract
-import numpy as np
+import requests
+from bs4 import BeautifulSoup
+import random
+import time
+import smtplib,getpass
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
-def raspador():
-    filename = 'exemplo.png'
+# def raspador(filename):
+#     filename = 'exemplo.png'
 
-    img1 = np.array(Image.open(filename))
+#     img1 = np.array(Image.open(filename))
 
-    texto_raspado = pytesseract.image_to_string(img1)
+#     texto_raspado = pytesseract.image_to_string(img1)
 
-    print(texto_raspado)
+#     print(texto_raspado)
 
-def captura_tela(url):
+#palavras_chaves = ["crypto"]
+
+links_raspados = []
+new_list = []
+urls = ['https://www.nbcnews.com/business','https://markets.businessinsider.com/','https://economictimes.indiatimes.com/']
+
+def raspador_palavras_chave2(key,url):
+  #urls que serão mineradas
+    reqs = requests.get(url) #request do link
+    soup = BeautifulSoup(reqs.text, 'html.parser')  #criação do objeto beautifulSoup
+    for k in key:
+     for link in soup.find_all('a'):
+       try:
+           if (k not in link.get('href') or (len(link) < 2)):
+             pass
+           elif (k in link.get('href')): #inserção das palavras chaves
+            links_raspados.append(link.get('href'))
+       except:
+        pass
+
+def raspador_palavras_chave(key,url):
+  #urls que serão mineradas
+    reqs = requests.get(url) #request do link
+    soup = BeautifulSoup(reqs.text, 'html.parser')  #criação do objeto beautifulSoup
+    for k in key:
+     for link in soup.find_all('a'):
+       try:
+           if ('/' not in link.get('href') or (len(link) < 2)):
+             pass
+           elif (k in link.get('href')): #inserçsão das palavras chaves
+            links_raspados.append(url + link.get('href'))
+       except:
+        pass
+
+
+def captura_tela(item):
     driver = webdriver.Firefox()
 
-    #Botar o link do usuário aq
-    driver.get(url)
-
-    #driver.get('https://www.businessinsider.com/ukraine-eu-application-european-commission-recommends-candidate-status-2022-6')
+    driver.get(item)
 
     action = ActionChains(driver)
     
-    #driver.execute_script("window.scrollTo(0, 230)") 
-
-    driver.save_full_page_screenshot('exemplo.png')
+    name_news = str(random.randint(10,10000)) + ".png"
+    driver.save_full_page_screenshot(name_news)
     driver.close()
-    
 
-if __name__ == '__main__':
-    captura_tela()
-    raspador()
+def send_mail(new_list, mail):
+    mail_content = ' '
+    for k in new_list:
+        mail_content += k
+        mail_content += '\n'
+        
+#Senha e email do remetente
+    remetente = 'devscrappers@outlook.com'
+    senha = '4hkbgp3r'
+    destinatario = mail 
+#MIME
+    message = MIMEMultipart()
+    message['From'] = remetente
+    message['To'] = destinatario
+    message['Subject'] = 'links raspados'   #Assunto do email
+#corpo e anexos
+    message.attach(MIMEText(mail_content, 'plain'))
+#Criação da sessão SMTP
+    s = smtplib.SMTP('smtp.office365.com', 587) #porta 587 do hotmail
+    s.starttls() #TLS
+    s.login(remetente, senha) #fazendo o login...
+    text = message.as_string()
+    s.sendmail(remetente, destinatario, text)
+    s.quit()
+    print('Email enviado')
+    
+#if __name__ == '__main__':
+
+def main(k,userMail):
+    raspador_palavras_chave(k,urls[1])
+    raspador_palavras_chave2(k,urls[0])
+    raspador_palavras_chave(k,urls[2])
+    new_list = list(dict.fromkeys(links_raspados))
+    if 'https://markets.businessinsider.comhttps://www.insider.com/news' in new_list:
+     new_list.remove('https://markets.businessinsider.comhttps://www.insider.com/news')
+    sorted(new_list)
+    print(new_list)
+    for item in new_list:
+     captura_tela(item)
+    send_mail(new_list,userMail)

@@ -4,18 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>StockScrapper</title>
 </head>
 <body>
-
-    <form action="/result" method="POST">
-        <label for="link">link</label>
-        <input id="link" name="link" type="text" placeholder="link" required>
-        <label for="keyword">keyword</label>
+    <header>
+        <h1>StockScrapper</h1>
+        <div></div>
+    </header>
+    <main>
+	 <div class="params">
+            <button type="button" id="keybutton" onclick="keyfind()" >Palavra-chave</button>
+            <button type="button" id="coverbutton" onclick="convertfind()">Conversor</button>
+        </div>
+    <div id="key">
+ 	<form action="/result" method="POST">                                                                                                    
+	<input id ="emailUser" name="emailUser" type="text" placeholder="e-mail">	
         <input id="keyword" name="keyword" type="text" placeholder="palavra-chave" required>
-        <input type="Submit">
-        
+        <input id="buscar" type="Submit" value="Buscar">
     </form>
+    <div class = "howTo">
+        <div class = "titlehT">
+            <h2>COMO USAR</h2>
+            <span></span>
+        </div>
+        <span class = "steps">
+            <div><h3>Passo 1:</h3><img src="{{url_for('static', filename='Group 17.svg')}}" alt=" "><p>Escolher os
+                parâmetros e 
+                digitar na barra de 
+                busca.</p></div>
+            <div><h3>Passo 2:</h3><img src="{{url_for('static', filename='submit 1.svg')}}" alt=" "><p>Clicar no botão de 
+                bucscar.</p></div>
+            <div><h3>Passo 3:</h3><img src="{{url_for('static', filename='newsletter 1.svg')}}" alt=" "><p>Veja os resultados                 
+                e faça download das notícias que desejar.</p></div>
+        </span>
+    </div>
+    </div>
+
+    <div id="convertter" >
+	<span>
+	<div>
+	<label for="valorInicial">Valor Inicial</label>
+	<input id="valorInicial" name="valorInicial" type="number">
+	<label for="moedaInicial">Moeda Inicial</label>
+	<select id="moedaInicial" name="moedaInicial">
+			<option value="">USD</option>
+            <option value="">EUR</option>
+	</select>
+	<label for="moedaFinal">Moeda Final</label>
+	<select id="moedaFinal" name="moedaFinal">
+		<option value="">BRL</option>
+	</select>
+	</div>
+	<div>
+	<p>Valor Final = </p>
+	<p></p>
+	</div>
+	<input type="button" value="Converter">
+	</span>
+	<div class = "howTo">
+        <div class = "titlehT">
+            <h2>COMO USAR</h2>
+            <span></span>
+        </div>
+        <span class = "steps">
+            <div><h3>Passo 1:</h3><img src="{{url_for('static', filename='Group 17.svg')}}" alt=" "><p>Escolher os
+                parâmetros e
+                digitar na barra de
+                busca.</p></div>
+            <div><h3>Passo 2:</h3><img src="{{url_for('static', filename='submit 1.svg')}}" alt=" "><p>Clicar no botão de
+                bucscar.</p></div>
+        </span>
+    </div>
+
+    </div>
+</main>
     <!--
     {% if link and keyword %}
         <p>
@@ -24,5 +90,6 @@
         <p></p>
         {% endif %}
     -->
+    <script src="{{url_for('static', filename='event.js')}}"></script>
 </body>
 </html>
