@@ -74,7 +74,7 @@ def send_mail(new_list, mail):
         
 #Senha e email do remetente
     remetente = 'devscrappers@outlook.com'
-    senha = '4hkbgp3r'
+    senha = ''
     destinatario = mail 
 #MIME
     message = MIMEMultipart()
